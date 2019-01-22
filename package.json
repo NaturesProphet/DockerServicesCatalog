@@ -1,0 +1,35 @@
+{
+  "name": "docker-services-catalog",
+  "version": "1.0.0",
+  "description": "Catálogo de serviços 'Fast Food' em Docker prontos para serem invocados via scripts do tipo 'npm start', já prontos para uso e instanciados como localhost",
+  "main": "null",
+  "scripts": {
+    "redis": "docker run --name redis-srv -d -p 6379:6379 redis",
+    "stop:redis": "docker stop redis-srv && docker rm redis-srv",
+    "minio": "docker run --name minio-srv -d -p 9000:9000 -e MINIO_ACCESS_KEY=root -e MINIO_SECRET_KEY=rootpass minio/minio server /data",
+    "stop:minio": "docker stop minio-srv && docker rm minio-srv",
+    "mssql:persistent": "docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=rootpass' -p 1433:1433 -v $PWD/mssql-data:/var/opt/mssql --name mssql-srv -d microsoft/mssql-server-linux",
+    "mssql:test": "docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=rootpass' -p 1433:1433 --name mssql-srv -d microsoft/mssql-server-linux",
+    "shell:mssql": "docker exec -i -t mssql-srv /bin/bash",
+    "stop:mssql": "docker stop mssql-srv && docker rm mssql-srv",
+    "activemq": "docker run --name=activemq-srv -d -e ACTIVEMQ_CONFIG_NAME=amqp-srv1 -e ACTIVEMQ_CONFIG_DEFAULTACCOUNT=false -e ACTIVEMQ_ADMIN_LOGIN=root -e ACTIVEMQ_ADMIN_PASSWORD=rootpass -e ACTIVEMQ_USERS_myproducer=producerpassword -e ACTIVEMQ_GROUPS_writes=myproducer -e ACTIVEMQ_USERS_myconsumer=consumerpassword -e ACTIVEMQ_GROUPS_reads=myconsumer -e ACTIVEMQ_JMX_user1_role=readwrite -e ACTIVEMQ_JMX_user1_password=jmx_password -e ACTIVEMQ_JMX_user2_role='read' -e ACTIVEMQ_JMX_user2_password=jmx2_password -e ACTIVEMQ_CONFIG_TOPICS_topic1=mytopic1 -e ACTIVEMQ_CONFIG_TOPICS_topic2=mytopic2 -e ACTIVEMQ_CONFIG_QUEUES_queue1=myqueue1 -e ACTIVEMQ_CONFIG_QUEUES_queue2=myqueue2 -e ACTIVEMQ_CONFIG_DEFAULTACCOUNT=false -e ACTIVEMQ_CONFIG_MINMEMORY='1024' -e ACTIVEMQ_CONFIG_MAXMEMORY='4096' -e ACTIVEMQ_CONFIG_SCHEDULERENABLED=true -p 8161:8161 -p 61616:61616 -p 61613:61613 webcenter/activemq",
+    "stop:activemq": "docker stop activemq-srv && docker rm activemq-srv",
+    "rabbitmq": "docker run -d --hostname rabbitMQ --name rabbitmq-srv -p 5672:5672 -p 8080:15672 rabbitmq:3-management",
+    "stop:rabbitmq": "docker stop rabbitmq-srv && docker rm rabbitmq-srv",
+    "mongodb": "docker run --name mongodb-srv -d -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=rootpass -e MONGO_INITDB_DATABASE=banco -p 8081:8081 -p 27017:27017 -p 27018:27018 -p 27019:27019 mongo",
+    "shell:mongodb": "docker exec -i -t mongodb-srv /bin/bash",
+    "stop:mongodb": "docker stop mongodb-srv && docker rm mongodb-srv",
+    "postgre:persistent": "docker run --name postgre-srv -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=rootpass -e POSTGRES_DB=docker -v $PWD/postgre-data:/var/lib/postgresql -v $PWD/postgre-data/data:/var/lib/postgresql/data -d postgres:alpine",
+    "postgre:test": "docker run --name postgre-srv -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=rootpass -e POSTGRES_DB=docker -d postgres:alpine",
+    "postgre:psql": "psql postgres://root:rootpass@localhost:5432/docker",
+    "stop:postgre": "docker stop postgre-srv && docker rm postgre-srv",
+    "stop:all": "docker stop $(docker ps -q -a) && docker rm $(docker ps -q -a)"
+  },
+  "keywords": [
+    "docker",
+    "catalog",
+    "services"
+  ],
+  "author": "Mateus Garcia",
+  "license": "UNLICENSED"
+}
