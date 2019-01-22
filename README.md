@@ -1,4 +1,4 @@
-# Catalogo 'Fast Food' de Serviços Docker
+# Catálogo 'Fast Food' de Serviços Docker
 
 ## Descrição
 Este Repositório contem os meus scripts de inicialização rápida dos serviços Docker que eu mais costumo usar.  
