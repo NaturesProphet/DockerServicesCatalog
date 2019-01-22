@@ -170,6 +170,8 @@ npm run spotfy:dl
 Todas as músicas estarão na pasta 'musicas' que será gerada na raiz desse repositório.  
 Este contaienr não precisa ser parado, pois está configurado para morrer automaticamente ao terminar o download das músicas.
 
+O Repositório original deste container pode ser encontrado <a href="https://github.com/ritiek/spotify-downloader">aqui</a>
+
 
 # Parar todos os containers em execução
 
