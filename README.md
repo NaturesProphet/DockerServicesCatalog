@@ -5,6 +5,9 @@ Este Repositório contem os meus scripts de inicialização rápida dos serviço
 A idéia é ter um arsenal de serviços prontos para uso sem muita complicação, bastando apenas executar um único comando para subir o serviço, e outro para desliga-lo.  
 Esse catálogo tem serviços diversos como bancos de dados, serviços de mensageria, cache, armazenamento web, etc., bastando um comando do tipo npm run {nome do serviço} para inicia-los.  
 
+## Vantagens
+Com esse Catálogo, você pode usar qualquer um dos serviços inclusos diretamente no seu computador SEM PRECISAR INSTALAR NEM CONFIGURAR nenhum servidor, salvando assim os preciosos recursos de memória, espaço  e tempo de processador, pois você só usará os serviços quando precisar, e os desligará ao terminar, de maneira que seu sistema operacional não será afetado em absolutamente nada.
+
 ### Acesso aos containers e seus serviços
 Todos os containers estão usando como usuário principal estas credenciais:
 ```bash
@@ -17,6 +20,8 @@ Esta é a lista dos softwares que eu uso e suas versões. É bem provável que f
 <a href="https://nodejs.org/en/">Nodejs 8.11.3</a> ou superior  
 <a href="https://nodejs.org/en/">npm 6.5.0</a> ou superior  
  <a href="https://www.docker.com/get-started">Docker 18</a> ou superior
+
+Obviamente, estou usando Linux.
 
 ## Lista de serviços e como usá-los
 
