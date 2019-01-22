@@ -158,7 +158,7 @@ Principais casos de uso: Recreação. Este Docker faz o Download de playlists in
 
 Comece baixando o índice da playlist dando o link (copie do navegador) como parâmetro
 ```bash
-npm run spotfy:index <URL-DA-PLAYLIST:
+npm run spotfy:index {URL-DA-PLAYLIST}
 
 exemplo:
 npm run spotfy:index https://open.spotify.com/playlist/4fiw57jeMepokneIvlu09q
