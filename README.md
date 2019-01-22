@@ -11,6 +11,11 @@ Todos os containers estão usando como usuário principal estas credenciais:
 username:   root
 password:   rootpass
 ```
+## Requisitos mínimos do sistema
+
+<a href="https://nodejs.org/en/">Nodejs 8.11.3</a> ou superior  
+<a href="https://nodejs.org/en/">npm 6.5.0</a> ou superior  
+ <a href="https://www.docker.com/get-started">Docker 18</a> ou superior
 
 ## Lista de serviços e como usá-los
 
