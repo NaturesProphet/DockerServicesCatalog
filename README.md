@@ -152,6 +152,8 @@ npm run stop:postgre
 ```
 
 ### Spotfy Downloader
+Um  <a href="https://github.com/ritiek/spotify-downloader">projeto interessante</a> que achei quando procurei formas de baixar playlists inteiras direto do Spotfy.  
+
 Principais casos de uso: Recreação. Este Docker faz o Download de playlists inteiras do spotfy
 
 Comece baixando o índice da playlist dando o link (copie do navegador) como parâmetro
@@ -169,8 +171,6 @@ npm run spotfy:dl
 ```
 Todas as músicas estarão na pasta 'musicas' que será gerada na raiz desse repositório.  
 Este contaienr não precisa ser parado, pois está configurado para morrer automaticamente ao terminar o download das músicas.
-
-O Repositório original deste container pode ser encontrado <a href="https://github.com/ritiek/spotify-downloader">aqui</a>
 
 
 # Parar todos os containers em execução
