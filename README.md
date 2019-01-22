@@ -12,6 +12,7 @@ username:   root
 password:   rootpass
 ```
 ## Requisitos mínimos do sistema
+Esta é a lista dos softwares que eu uso e suas versões. É bem provável que funcione perfeitamente mesmo com versões um pouco anteriores a essas.
 
 <a href="https://nodejs.org/en/">Nodejs 8.11.3</a> ou superior  
 <a href="https://nodejs.org/en/">npm 6.5.0</a> ou superior  
