@@ -151,13 +151,6 @@ Para desligar:
 npm run stop:postgre
 ```
 
-# Parar todos os containers em execução
-
-Para parar todos os containers em execução e liberar seus recursos:
-```
-npm run stop:all
-```
-
 ### Spotfy Downloader
 Principais casos de uso: Recreação. Este Docker faz o Download de playlists inteiras do spotfy
 
@@ -176,6 +169,7 @@ npm run spotfy:dl
 ```
 Todas as músicas estarão na pasta 'musicas' que será gerada na raiz desse repositório.  
 Este contaienr não precisa ser parado, pois está configurado para morrer automaticamente ao terminar o download das músicas.
+
 
 # Parar todos os containers em execução
 
