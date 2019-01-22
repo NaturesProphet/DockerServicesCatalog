@@ -9,7 +9,7 @@ Esse catálogo tem serviços diversos como bancos de dados, serviços de mensage
 Com esse Catálogo, você pode usar qualquer um dos serviços inclusos diretamente no seu computador SEM PRECISAR INSTALAR NEM CONFIGURAR nenhum servidor, salvando assim os preciosos recursos de memória, espaço  e tempo de processador, pois você só usará os serviços quando precisar, e os desligará ao terminar, de maneira que seu sistema operacional não será afetado em absolutamente nada.
 
 ### Acesso aos containers e seus serviços
-Todos os containers estão usando como usuário principal estas credenciais:
+Quase todos os containers estão usando como usuário principal estas credenciais:
 ```bash
 username:   root
 password:   rootpass
@@ -107,6 +107,13 @@ npm run shell:mongodb
 
 ### Microsoft Sql Server (Linux)
 Principais casos de uso: Banco de dados Relacional
+
+Dados de conexão:
+```bash
+username: SA
+password: !SenhaDificil%
+schema: tempdb
+```
 
 Para iniciar uma instancia que PERSISTE os dados no repositório:
 ```bash
