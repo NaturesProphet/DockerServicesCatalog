@@ -179,6 +179,13 @@ npm run spotfy:dl
 Todas as músicas estarão na pasta 'musicas' que será gerada na raiz desse repositório.  
 Este container não precisa ser parado, pois está configurado para morrer automaticamente ao terminar o download das músicas.
 
+### Sonarqube (Serviço de análise de qualidade de código)
+[Sonarqube](https://www.sonarqube.org/) é um serviço que recebe resultados de scaneamentos locais com o [sonar-scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) e analisa o código em varios aspectos interessantes.
+
+Para levantar esse serviço, entre no diretório sonarqube deste repositório, e então execute o comando:
+```bash
+docker-compose up
+```
 
 # Parar todos os containers em execução
 
