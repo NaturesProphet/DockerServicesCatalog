@@ -158,6 +158,32 @@ Para desligar:
 npm run stop:postgre
 ```
 
+### Elasticsearch
+Principais casos de uso: Banco de dados indexado não relacional baseado em requisições http
+
+Para iniciar uma instancia simples (não salva os dados)
+```bash
+npm run elasticsearch
+```
+
+Para desligar:
+```bash
+npm run stop:elasticsearch
+```
+
+### Kibana
+Principais casos de uso: geração de gráficos com base em dados indexados no Elasticsearch
+
+Para iniciar uma instancia simples
+```bash
+npm run kibana
+```
+
+Para desligar:
+```bash
+npm run stop:kibana
+```
+
 ### Spotfy Downloader
 Um  <a href="https://github.com/ritiek/spotify-downloader">projeto interessante</a> que achei quando procurei formas de baixar playlists inteiras direto do Spotfy.  
 

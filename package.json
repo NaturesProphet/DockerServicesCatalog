@@ -26,7 +26,11 @@
     "stop:postgre": "docker stop postgre-srv && docker rm postgre-srv",
     "stop:all": "docker stop $(docker ps -q -a) && docker rm $(docker ps -q -a)",
     "spotfy:index": "mkdir musicas && cd musicas && docker run --rm -it -v $(pwd):/music ritiek/spotify-downloader -p ",
-    "spotfy:dl": "cd musicas && docker run --rm -it -v $(pwd):/music ritiek/spotify-downloader -l *.txt"
+    "spotfy:dl": "cd musicas && docker run --rm -it -v $(pwd):/music ritiek/spotify-downloader -l *.txt",
+    "elasticsearch": "docker run --name elasticsearch-srv -d -p 9200:9200 -p 9300:9300 -e discovery.type=single-node elasticsearch:6.6.1",
+    "stop:elasticsearch": "docker stop elasticsearch-srv && docker rm elasticsearch-srv",
+    "kibana": "docker run --name kibana-srv -d -p 5601:5601 kibana:6.6.1",
+    "stop:kibana": "docker stop kibana-srv && docker rm kibana-srv"
   },
   "keywords": [
     "docker",
