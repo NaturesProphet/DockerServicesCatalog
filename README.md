@@ -37,6 +37,23 @@ Para desligar:
 ```bash
 npm run stop:redis
 ```
+### Redis Commander
+Uma GUI WEB para o Redis
+
+Para iniciar:
+```
+npm run redis:gui
+```
+
+Para desligar:
+```
+npm run stop:redis:gui
+```
+
+Para acessar:
+```
+http://localhost:8081
+```
 
 ### Minio
 Principais casos de uso: Serviço de armazenamento de arquivos para Web

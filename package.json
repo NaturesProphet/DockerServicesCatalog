@@ -30,7 +30,9 @@
     "elasticsearch": "docker run --name elasticsearch-srv -d -p 9200:9200 -p 9300:9300 -e discovery.type=single-node -e cluster.name=docker-cluster docker.elastic.co/elasticsearch/elasticsearch:6.6.2",
     "stop:elasticsearch": "docker stop elasticsearch-srv && docker rm elasticsearch-srv",
     "kibana": "docker run --name kibana-srv -it -p 5601:5601 -e SERVER_NAME=kibana-srv -e ELASTICSEARCH_URL=http://<SEU_IP_LOCAL_VERDADEIRO>:9200 -e ELASTICSEARCH_USERNAME=root -e ELASTICSEARCH_PASSWD=rootpass -e XPACK_GRAPH_ENABLED=true -e XPACK_WATCHER_ENABLED=true -e XPACK_ML_ENABLED=true -e XPACK_MONITORING_ENABLED=true -e XPACK_MONITORING_UI_CONTAINER_ELASTICSEARCH_ENABLED docker.elastic.co/kibana/kibana:6.6.2",
-    "stop:kibana": "docker stop kibana-srv && docker rm kibana-srv"
+    "stop:kibana": "docker stop kibana-srv && docker rm kibana-srv",
+    "redis:gui": "docker run -d --hostname redis-commander --name redis-commander -p 8081:8081 -e REDIS_HOSTS=local:redis:6379 rediscommander/redis-commander:latest",
+    "stop:redis:gui": "docker stop redis-commander && docker rm redis-commander"
   },
   "keywords": [
     "docker",
