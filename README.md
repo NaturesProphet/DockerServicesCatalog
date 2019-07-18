@@ -231,9 +231,17 @@ docker-compose up
 ```
 ### Pilha LAMP
 Ajuste no argumento -v do script para onde o diretorio /var/www/html deve apontar na maquina host. O padrão é $PWD, ou seja, irá ler como diretorio root do apache o diretorio atual.
+
+Para o [PHP 5](https://hub.docker.com/r/tutum/lamp/):
 ```
-npm run lamp
+npm run lamp:php5
 ```
+
+Para o [PHP 7](https://hub.docker.com/r/fauria/lamp/):
+```
+npm run lamp:php7
+```
+
 
 # Parar todos os containers em execução
 
