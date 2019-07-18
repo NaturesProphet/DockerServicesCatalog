@@ -4,6 +4,7 @@
   "description": "Catálogo de serviços 'Fast Food' em Docker prontos para serem invocados via scripts do tipo 'npm start', já prontos para uso e instanciados como localhost",
   "main": "null",
   "scripts": {
+    "lamp": "docker run -it -p 80:80 -p 3306:3306 -v $PWD:/var/www/html tutum/lamp",
     "redis": "docker run --name redis-srv -d -p 6379:6379 redis",
     "stop:redis": "docker stop redis-srv && docker rm redis-srv",
     "minio": "docker run --name minio-srv -d -p 9000:9000 -e MINIO_ACCESS_KEY=root -e MINIO_SECRET_KEY=rootpass minio/minio server /data",

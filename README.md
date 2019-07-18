@@ -229,6 +229,11 @@ Para levantar esse serviço, entre no diretório sonarqube deste repositório, e
 ```bash
 docker-compose up
 ```
+### Pilha LAMP
+Ajuste no argumento -v do script para onde o diretorio /var/www/html deve apontar na maquina host. O padrão é $PWD, ou seja, irá ler como diretorio root do apache o diretorio atual.
+```
+npm run lamp
+```
 
 # Parar todos os containers em execução
 
