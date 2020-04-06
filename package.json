@@ -26,6 +26,8 @@
     "postgre:test": "docker run --name postgre-srv -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=rootpass -e POSTGRES_DB=docker -d postgres:alpine",
     "postgre:psql": "psql postgres://root:rootpass@localhost:5432/docker",
     "stop:postgre": "docker stop postgre-srv && docker rm postgre-srv",
+    "mysql":"docker run --name mysql-img -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=Customer -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin123 -p 3306:3306 -d mysql:5",
+    "stop:mysql":"docker stop mysql-img && docker rm mysql-img",
     "stop:all": "docker stop $(docker ps -q -a) && docker rm $(docker ps -q -a)",
     "spotfy:index": "mkdir musicas && cd musicas && docker run --rm -it -v $(pwd):/music ritiek/spotify-downloader -p ",
     "spotfy:dl": "cd musicas && docker run --rm -it -v $(pwd):/music ritiek/spotify-downloader -l *.txt",
